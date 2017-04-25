@@ -1,0 +1,176 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5533,        168]
+NotebookOptionsPosition[      5210,        151]
+NotebookOutlinePosition[      5562,        167]
+CellTagsIndexPosition[      5519,        164]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"newe", "*", "Thetai"}], "\[Equal]", 
+      RowBox[{"Pnew", 
+       RowBox[{"(", 
+        RowBox[{"y", "-", "z"}], ")"}]}]}], ",", 
+     RowBox[{
+      RowBox[{"newe", 
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         RowBox[{
+          RowBox[{"Thetai", "^", "2"}], "/", "2"}]}], ")"}]}], "\[Equal]", 
+      RowBox[{"Pnew", 
+       RowBox[{"(", 
+        RowBox[{"2", "-", 
+         RowBox[{
+          RowBox[{"y", "^", "2"}], "/", "2"}], "-", 
+         RowBox[{
+          RowBox[{"z", "^", "2"}], "/", "2"}]}], ")"}]}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", "z"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.702035260286646*^9, 3.7020353438867397`*^9}, {
+   3.702035390167632*^9, 3.702035408620926*^9}, {3.7020354394730043`*^9, 
+   3.702035447399037*^9}, 3.7020354912483377`*^9, {3.702039069994129*^9, 
+   3.702039073129861*^9}, {3.7020391374385033`*^9, 3.702039156791596*^9}, {
+   3.702040531849968*^9, 3.702040540777588*^9}, {3.702044814856798*^9, 
+   3.702044832926097*^9}, {3.7020449966139193`*^9, 3.702045003259531*^9}, {
+   3.702045047306857*^9, 3.702045054224832*^9}, {3.702052003570826*^9, 
+   3.702052003831819*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"y", "\[Rule]", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"newe", " ", "Pnew", " ", "Thetai"}], "-", 
+        SqrtBox[
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", "4"}], " ", "newe", " ", 
+           SuperscriptBox["Pnew", "3"]}], "+", 
+          RowBox[{"8", " ", 
+           SuperscriptBox["Pnew", "4"]}], "-", 
+          RowBox[{
+           SuperscriptBox["newe", "2"], " ", 
+           SuperscriptBox["Pnew", "2"], " ", 
+           SuperscriptBox["Thetai", "2"]}], "+", 
+          RowBox[{"2", " ", "newe", " ", 
+           SuperscriptBox["Pnew", "3"], " ", 
+           SuperscriptBox["Thetai", "2"]}]}]]}], 
+       RowBox[{"2", " ", 
+        SuperscriptBox["Pnew", "2"]}]]}], ",", 
+     RowBox[{"z", "\[Rule]", 
+      FractionBox[
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "newe"}], " ", "Thetai"}], "-", 
+        FractionBox[
+         SqrtBox[
+          RowBox[{
+           RowBox[{"-", 
+            SuperscriptBox["Pnew", "2"]}], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"4", " ", "newe", " ", "Pnew"}], "-", 
+             RowBox[{"8", " ", 
+              SuperscriptBox["Pnew", "2"]}], "+", 
+             RowBox[{
+              SuperscriptBox["newe", "2"], " ", 
+              SuperscriptBox["Thetai", "2"]}], "-", 
+             RowBox[{"2", " ", "newe", " ", "Pnew", " ", 
+              SuperscriptBox["Thetai", "2"]}]}], ")"}]}]], "Pnew"]}], 
+       RowBox[{"2", " ", "Pnew"}]]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"y", "\[Rule]", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"newe", " ", "Pnew", " ", "Thetai"}], "+", 
+        SqrtBox[
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", "4"}], " ", "newe", " ", 
+           SuperscriptBox["Pnew", "3"]}], "+", 
+          RowBox[{"8", " ", 
+           SuperscriptBox["Pnew", "4"]}], "-", 
+          RowBox[{
+           SuperscriptBox["newe", "2"], " ", 
+           SuperscriptBox["Pnew", "2"], " ", 
+           SuperscriptBox["Thetai", "2"]}], "+", 
+          RowBox[{"2", " ", "newe", " ", 
+           SuperscriptBox["Pnew", "3"], " ", 
+           SuperscriptBox["Thetai", "2"]}]}]]}], 
+       RowBox[{"2", " ", 
+        SuperscriptBox["Pnew", "2"]}]]}], ",", 
+     RowBox[{"z", "\[Rule]", 
+      FractionBox[
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "newe"}], " ", "Thetai"}], "+", 
+        FractionBox[
+         SqrtBox[
+          RowBox[{
+           RowBox[{"-", 
+            SuperscriptBox["Pnew", "2"]}], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"4", " ", "newe", " ", "Pnew"}], "-", 
+             RowBox[{"8", " ", 
+              SuperscriptBox["Pnew", "2"]}], "+", 
+             RowBox[{
+              SuperscriptBox["newe", "2"], " ", 
+              SuperscriptBox["Thetai", "2"]}], "-", 
+             RowBox[{"2", " ", "newe", " ", "Pnew", " ", 
+              SuperscriptBox["Thetai", "2"]}]}], ")"}]}]], "Pnew"]}], 
+       RowBox[{"2", " ", "Pnew"}]]}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.7020353277560377`*^9, 3.702035413382494*^9, 
+  3.702035452037003*^9, 3.702035494331965*^9, 3.7020390769371*^9, 
+  3.70203994694123*^9, 3.7020405449068117`*^9, 3.702044869980707*^9, 
+  3.702045057303101*^9, 3.7020520072854023`*^9}]
+}, Open  ]]
+},
+WindowSize->{808, 651},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (July 28, \
+2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1264, 32, 54, "Input"],
+Cell[1847, 56, 3347, 92, 255, "Output"]
+}, Open  ]]
+}
+]
+*)
+
