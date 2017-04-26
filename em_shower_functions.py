@@ -55,7 +55,10 @@ def PAIR_PRODUCTION1(Incident, input_list, delta_E_factor, X_o):
 	return
 
 def BREMSSTRAHLUNG1(Incident, input_list, delta_E_factor, X_o):
-	new_energy = In
+	new_energy = Incident.energy
+	theta_i    = Incident.theta
+	p_new_e    =
+	
 
 
 #-------------------------------------------------------------------------
