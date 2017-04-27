@@ -5,7 +5,8 @@
 
 #em_shower imports
 from em_shower_classes   import Particle
-from em_shower_functions import BREMSSTRAHLUNG1, PAIR_PRODUCTION1, TF_rand
+from em_shower_functions import TF_rand, delta_theta_calc, Energy_Shower_list, XY_Shower_list
+from em_shower_functions import BREMSSTRAHLUNG0, PAIR_PRODUCTION0, BREMSSTRAHLUNG1, PAIR_PRODUCTION1
 
 
 #Other Imports
@@ -22,11 +23,12 @@ import numpy as np
 #MODEL PARAMETERS
 
 #Original Particle Parameters
-Orig_type   = 'electron' # gamma, electron, or positron
-Orig_energy = 500.
+Orig_type   = 'gamma' # gamma, electron, or positron
+Orig_energy = 800.
 Orig_x_pos  = 0.
 Orig_y_pos  = 0.
-Orig_theta  = pi/4.
+Orig_theta  = 0.
+
 
 
 #Truth Values (Which assumptions to make for the model)
@@ -38,16 +40,18 @@ Const_scat_dist  = True
 ## None for now ##
 
 #Floats
-Theta_scat  = 0.000000002
-E_loss      = 2.0
 E_crit      = 76.0
 X_o         = 36.0
 Density     = 0.00135
+print "N is: %r" % (log(Orig_energy / E_crit) / log(2.))
 
-#Chosing which BREMSSTRAHLUNG and PAIR_PRODUCTION functions to from Truth Value Parameters
+#Chosing which BREMSSTRAHLUNG and PAIR_PRODUCTION functions to use from Truth Value Parameters
 if Const_scat_dist and Const_scat_angle and Const_E_loss:
-	BREMSSTRAHLUNG  = BREMSSTRAHLUNG1
-	PAIR_PRODUCTION = PAIR_PRODUCTION1 
+	BREMSSTRAHLUNG  = BREMSSTRAHLUNG0
+	PAIR_PRODUCTION = PAIR_PRODUCTION0 
+
+#Preliminary Calculations
+delta_theta = delta_theta_calc(Orig_energy,E_crit)
 
 #-------------------------------------------------------------------------
 
@@ -64,21 +68,31 @@ print Shower_list
 
 N_crit = int( ceil( log(Original_Particle.energy/E_crit) / log(2.0) )) 
 
-keep_going = False
+E_gt_E_crit = True
 
 #Before E < E_crit
-while keep_going:
+while E_gt_E_crit:
+	print 'PERFORMING ANTOHER ITERATION'
+
 	previous_list = Shower_list[-1]
 	new_list      = []
 	for part in previous_list:
 		if part.energy > E_crit:
 			if part.name == 'gamma':
-				PAIR_PRODUCTION(part,new_list)
+				PAIR_PRODUCTION(part,new_list,delta_theta,X_o)
 			else:
-				BREMSSTRAHLUNG(part,new_list)
+				BREMSSTRAHLUNG(part,new_list,delta_theta,X_o)
 
-		else:
-			scatter electrons
+		#else:             #######################################################################
+			#scatter electrons
+		else:              #######################################################################
+			new_list.append(part)
+	print "length of new_list is: %r" % (len(new_list))
+	Shower_list.append(new_list)
+	if all( Shower_list[-1][i].energy < E_crit for i in range(len(Shower_list[-1])) ):
+		E_gt_E_crit = False
+
+	
 
 
 #-------------------------------------------------------------------------
@@ -89,10 +103,7 @@ while keep_going:
 #-------------------------------------------------------------------------
 #Testing
 
-test_list = [1]
-print "test list before is: %r" % test_list
-BREMSSTRAHLUNG(Original_Particle,test_list,1,0)
-print "test list after is: %r" % test_list
+print XY_Shower_list(Shower_list)
 
 
 #-------------------------------------------------------------------------

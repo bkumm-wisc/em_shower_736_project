@@ -1,3 +1,5 @@
+#em_shower_classes.py
+
 #-------------------------------------------------------------------------
 #IMPORTS
 
@@ -18,7 +20,7 @@ class Particle:
 
 	def __init__(self, name, energy, x_pos, y_pos, theta):
 
-		name_to_mass = {'electron':0.510998946 , 'poistron':0.510998946, 'nitrogen':13047., 'gamma':0.0}
+		name_to_mass = {'electron':0.510998946 , 'positron':0.510998946, 'nitrogen':13047., 'gamma':0.0}
 
 
 		self.name    = str(name)
