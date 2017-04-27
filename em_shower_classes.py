@@ -1,7 +1,12 @@
 #-------------------------------------------------------------------------
-#Imports
+#IMPORTS
 
-from math import sqrt, cos, sin
+#em_shower Imports (none)
+
+#Other Imports
+from math import sqrt, cos, sin, log, ceil, sqrt, pi
+from random import getrandbits
+import numpy as np
 
 #-------------------------------------------------------------------------
 

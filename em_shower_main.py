@@ -5,11 +5,11 @@
 
 #em_shower imports
 from em_shower_classes   import Particle
-from em_shower_functions import BREMSSTRAHLUNG1, PAIR_PRODUCTION1
+from em_shower_functions import BREMSSTRAHLUNG1, PAIR_PRODUCTION1, TF_rand
 
 
-#Other imports
-from math   import cos, log, ceil, sqrt, pi
+#Other Imports
+from math import sqrt, cos, sin, log, ceil, sqrt, pi
 from random import getrandbits
 import numpy as np
 

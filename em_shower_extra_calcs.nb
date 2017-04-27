@@ -10,16 +10,21 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      5533,        168]
-NotebookOptionsPosition[      5210,        151]
-NotebookOutlinePosition[      5562,        167]
-CellTagsIndexPosition[      5519,        164]
+NotebookDataLength[     14483,        424]
+NotebookOptionsPosition[     13967,        401]
+NotebookOutlinePosition[     14319,        417]
+CellTagsIndexPosition[     14276,        414]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"Pair", " ", "Production", " ", "Calculation"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.702201706620233*^9, 3.7022017205806437`*^9}}],
 
 Cell[CellGroupData[{
+
 Cell[BoxData[
  RowBox[{"Solve", "[", 
   RowBox[{
@@ -147,7 +152,252 @@ Cell[BoxData[
   3.702035452037003*^9, 3.702035494331965*^9, 3.7020390769371*^9, 
   3.70203994694123*^9, 3.7020405449068117`*^9, 3.702044869980707*^9, 
   3.702045057303101*^9, 3.7020520072854023`*^9}]
-}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"Bhremsstrahlung", " ", "Calculation"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Pold", "*", "Thetai"}], "\[Equal]", 
+       RowBox[{
+        RowBox[{"Pnew", "*", "ThetaE"}], "-", 
+        RowBox[{"Pg", "*", "ThetaG"}]}]}], ",", 
+      RowBox[{
+       RowBox[{"Pold", 
+        RowBox[{"(", 
+         RowBox[{"1", "-", 
+          RowBox[{
+           RowBox[{"Thetai", "^", "2"}], "/", "2"}]}], ")"}]}], "\[Equal]", 
+       RowBox[{
+        RowBox[{"Pnew", 
+         RowBox[{"(", 
+          RowBox[{"1", "-", 
+           RowBox[{
+            RowBox[{"ThetaE", "^", "2"}], "/", "2"}]}], ")"}]}], " ", "+", 
+        " ", 
+        RowBox[{"Pg", 
+         RowBox[{"(", 
+          RowBox[{"1", "-", 
+           RowBox[{
+            RowBox[{"ThetaG", "^", "2"}], "/", "2"}]}], ")"}]}]}]}]}], "}"}], 
+    ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"ThetaE", ",", "ThetaG"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.702201727168632*^9, 3.7022019455150127`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"ThetaE", "\[Rule]", 
+      RowBox[{
+       FractionBox["1", 
+        RowBox[{"2", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"Pg", " ", "Pnew"}], "+", 
+           SuperscriptBox["Pnew", "2"]}], ")"}]}]], 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"2", " ", "Pnew", " ", "Pold", " ", "Thetai"}], "-", 
+         RowBox[{"\[Sqrt]", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"4", " ", 
+             SuperscriptBox["Pnew", "2"], " ", 
+             SuperscriptBox["Pold", "2"], " ", 
+             SuperscriptBox["Thetai", "2"]}], "-", 
+            RowBox[{"4", " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"-", "Pg"}], " ", "Pnew"}], "-", 
+               SuperscriptBox["Pnew", "2"]}], ")"}], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"2", " ", 
+                SuperscriptBox["Pg", "2"]}], "+", 
+               RowBox[{"2", " ", "Pg", " ", "Pnew"}], "-", 
+               RowBox[{"2", " ", "Pg", " ", "Pold"}], "+", 
+               RowBox[{"Pg", " ", "Pold", " ", 
+                SuperscriptBox["Thetai", "2"]}], "-", 
+               RowBox[{
+                SuperscriptBox["Pold", "2"], " ", 
+                SuperscriptBox["Thetai", "2"]}]}], ")"}]}]}], ")"}]}]}], 
+        ")"}]}]}], ",", 
+     RowBox[{"ThetaG", "\[Rule]", 
+      RowBox[{"-", 
+       RowBox[{
+        FractionBox["1", "Pg"], 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"Pold", " ", "Thetai"}], "-", 
+          FractionBox[
+           RowBox[{
+            SuperscriptBox["Pnew", "2"], " ", "Pold", " ", "Thetai"}], 
+           RowBox[{
+            RowBox[{"Pg", " ", "Pnew"}], "+", 
+            SuperscriptBox["Pnew", "2"]}]], "+", 
+          RowBox[{
+           FractionBox["1", 
+            RowBox[{"2", " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"Pg", " ", "Pnew"}], "+", 
+               SuperscriptBox["Pnew", "2"]}], ")"}]}]], 
+           RowBox[{"Pnew", " ", 
+            RowBox[{"\[Sqrt]", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"4", " ", 
+                SuperscriptBox["Pnew", "2"], " ", 
+                SuperscriptBox["Pold", "2"], " ", 
+                SuperscriptBox["Thetai", "2"]}], "-", 
+               RowBox[{"4", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"-", "Pg"}], " ", "Pnew"}], "-", 
+                  SuperscriptBox["Pnew", "2"]}], ")"}], " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"2", " ", 
+                   SuperscriptBox["Pg", "2"]}], "+", 
+                  RowBox[{"2", " ", "Pg", " ", "Pnew"}], "-", 
+                  RowBox[{"2", " ", "Pg", " ", "Pold"}], "+", 
+                  RowBox[{"Pg", " ", "Pold", " ", 
+                   SuperscriptBox["Thetai", "2"]}], "-", 
+                  RowBox[{
+                   SuperscriptBox["Pold", "2"], " ", 
+                   SuperscriptBox["Thetai", "2"]}]}], ")"}]}]}], 
+              ")"}]}]}]}]}], ")"}]}]}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"ThetaE", "\[Rule]", 
+      RowBox[{
+       FractionBox["1", 
+        RowBox[{"2", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"Pg", " ", "Pnew"}], "+", 
+           SuperscriptBox["Pnew", "2"]}], ")"}]}]], 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"2", " ", "Pnew", " ", "Pold", " ", "Thetai"}], "+", 
+         RowBox[{"\[Sqrt]", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"4", " ", 
+             SuperscriptBox["Pnew", "2"], " ", 
+             SuperscriptBox["Pold", "2"], " ", 
+             SuperscriptBox["Thetai", "2"]}], "-", 
+            RowBox[{"4", " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"-", "Pg"}], " ", "Pnew"}], "-", 
+               SuperscriptBox["Pnew", "2"]}], ")"}], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"2", " ", 
+                SuperscriptBox["Pg", "2"]}], "+", 
+               RowBox[{"2", " ", "Pg", " ", "Pnew"}], "-", 
+               RowBox[{"2", " ", "Pg", " ", "Pold"}], "+", 
+               RowBox[{"Pg", " ", "Pold", " ", 
+                SuperscriptBox["Thetai", "2"]}], "-", 
+               RowBox[{
+                SuperscriptBox["Pold", "2"], " ", 
+                SuperscriptBox["Thetai", "2"]}]}], ")"}]}]}], ")"}]}]}], 
+        ")"}]}]}], ",", 
+     RowBox[{"ThetaG", "\[Rule]", 
+      RowBox[{"-", 
+       RowBox[{
+        FractionBox["1", "Pg"], 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"Pold", " ", "Thetai"}], "-", 
+          FractionBox[
+           RowBox[{
+            SuperscriptBox["Pnew", "2"], " ", "Pold", " ", "Thetai"}], 
+           RowBox[{
+            RowBox[{"Pg", " ", "Pnew"}], "+", 
+            SuperscriptBox["Pnew", "2"]}]], "-", 
+          RowBox[{
+           FractionBox["1", 
+            RowBox[{"2", " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"Pg", " ", "Pnew"}], "+", 
+               SuperscriptBox["Pnew", "2"]}], ")"}]}]], 
+           RowBox[{"Pnew", " ", 
+            RowBox[{"\[Sqrt]", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"4", " ", 
+                SuperscriptBox["Pnew", "2"], " ", 
+                SuperscriptBox["Pold", "2"], " ", 
+                SuperscriptBox["Thetai", "2"]}], "-", 
+               RowBox[{"4", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"-", "Pg"}], " ", "Pnew"}], "-", 
+                  SuperscriptBox["Pnew", "2"]}], ")"}], " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"2", " ", 
+                   SuperscriptBox["Pg", "2"]}], "+", 
+                  RowBox[{"2", " ", "Pg", " ", "Pnew"}], "-", 
+                  RowBox[{"2", " ", "Pg", " ", "Pold"}], "+", 
+                  RowBox[{"Pg", " ", "Pold", " ", 
+                   SuperscriptBox["Thetai", "2"]}], "-", 
+                  RowBox[{
+                   SuperscriptBox["Pold", "2"], " ", 
+                   SuperscriptBox["Thetai", "2"]}]}], ")"}]}]}], 
+              ")"}]}]}]}]}], ")"}]}]}]}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.702201976961767*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"4.55", "*", "5.66"}], "\[Equal]", 
+      RowBox[{
+       RowBox[{"3.44", "*", "ThetaE"}], "-", 
+       RowBox[{"2.33", "*", "ThetaG"}]}]}], ",", 
+     RowBox[{
+      RowBox[{"4.55", 
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         RowBox[{
+          RowBox[{"5.66", "^", "2"}], "/", "2"}]}], ")"}]}], "\[Equal]", 
+      RowBox[{
+       RowBox[{"3.44", 
+        RowBox[{"(", 
+         RowBox[{"1", "-", 
+          RowBox[{
+           RowBox[{"ThetaE", "^", "2"}], "/", "2"}]}], ")"}]}], " ", "+", " ", 
+       RowBox[{"2.33", 
+        RowBox[{"(", 
+         RowBox[{"1", "-", 
+          RowBox[{
+           RowBox[{"ThetaG", "^", "2"}], "/", "2"}]}], ")"}]}]}]}]}], "}"}], 
+   ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"ThetaE", ",", "ThetaG"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.70223958732097*^9, 3.702239647836417*^9}}]
 },
 WindowSize->{808, 651},
 WindowMargins->{{4, Automatic}, {Automatic, 4}},
@@ -166,10 +416,16 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
+Cell[558, 20, 174, 3, 32, "Input"],
 Cell[CellGroupData[{
-Cell[580, 22, 1264, 32, 54, "Input"],
-Cell[1847, 56, 3347, 92, 255, "Output"]
-}, Open  ]]
+Cell[757, 27, 1264, 32, 54, "Input"],
+Cell[2024, 61, 3347, 92, 255, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5408, 158, 1130, 35, 117, "Input"],
+Cell[6541, 195, 6457, 171, 392, "Output"]
+}, Open  ]],
+Cell[13013, 369, 950, 30, 75, "Input"]
 }
 ]
 *)
