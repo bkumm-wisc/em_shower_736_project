@@ -9,6 +9,7 @@
 from math import sqrt, cos, sin, log, ceil, sqrt, pi
 from random import getrandbits
 import numpy as np
+import pylab as pl
 
 #-------------------------------------------------------------------------
 
@@ -18,17 +19,19 @@ import numpy as np
 #CLASSES
 class Particle:
 
-	def __init__(self, name, energy, x_pos, y_pos, theta):
+	def __init__(self, name, energy, x_pos, y_pos, theta, pid):
 
 		name_to_mass = {'electron':0.510998946 , 'positron':0.510998946, 'nitrogen':13047., 'gamma':0.0}
 
 
 		self.name    = str(name)
+		self.pid     = int(pid)
 		self.mass    = float(name_to_mass[name])
 		self.energy  = float(energy)
 		self.x_pos   = float(x_pos)
 		self.y_pos   = float(y_pos)
 		self.theta   = float(theta)
+		
 
 		if name == 'gamma':
 			self.vel = 1
@@ -39,3 +42,4 @@ class Particle:
 		self.y_vel   = float(self.vel) * cos(theta)
 		
 #-------------------------------------------------------------------------
+

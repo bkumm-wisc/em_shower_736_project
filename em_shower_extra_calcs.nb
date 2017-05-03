@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     14483,        424]
-NotebookOptionsPosition[     13967,        401]
-NotebookOutlinePosition[     14319,        417]
-CellTagsIndexPosition[     14276,        414]
+NotebookDataLength[     17956,        530]
+NotebookOptionsPosition[     17127,        497]
+NotebookOutlinePosition[     17481,        513]
+CellTagsIndexPosition[     17438,        510]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -31,12 +31,12 @@ Cell[BoxData[
    RowBox[{"{", 
     RowBox[{
      RowBox[{
-      RowBox[{"newe", "*", "Thetai"}], "\[Equal]", 
+      RowBox[{"Pold", "*", "Thetai"}], "\[Equal]", 
       RowBox[{"Pnew", 
        RowBox[{"(", 
-        RowBox[{"y", "-", "z"}], ")"}]}]}], ",", 
+        RowBox[{"ThetaP", "-", "ThetaE"}], ")"}]}]}], ",", 
      RowBox[{
-      RowBox[{"newe", 
+      RowBox[{"Pold", 
        RowBox[{"(", 
         RowBox[{"1", "-", 
          RowBox[{
@@ -45,9 +45,9 @@ Cell[BoxData[
        RowBox[{"(", 
         RowBox[{"2", "-", 
          RowBox[{
-          RowBox[{"y", "^", "2"}], "/", "2"}], "-", 
+          RowBox[{"ThetaP", "^", "2"}], "/", "2"}], "-", 
          RowBox[{
-          RowBox[{"z", "^", "2"}], "/", "2"}]}], ")"}]}]}]}], "}"}], ",", 
+          RowBox[{"ThetaE", "^", "2"}], "/", "2"}]}], ")"}]}]}]}], "}"}], ",", 
    RowBox[{"{", 
     RowBox[{"y", ",", "z"}], "}"}]}], "]"}]], "Input",
  CellChangeTimes->{{3.702035260286646*^9, 3.7020353438867397`*^9}, {
@@ -57,7 +57,8 @@ Cell[BoxData[
    3.702040531849968*^9, 3.702040540777588*^9}, {3.702044814856798*^9, 
    3.702044832926097*^9}, {3.7020449966139193`*^9, 3.702045003259531*^9}, {
    3.702045047306857*^9, 3.702045054224832*^9}, {3.702052003570826*^9, 
-   3.702052003831819*^9}}],
+   3.702052003831819*^9}, {3.7022407371001463`*^9, 3.7022407479443398`*^9}, {
+   3.7022423959925127`*^9, 3.702242414262793*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -67,20 +68,19 @@ Cell[BoxData[
      RowBox[{"y", "\[Rule]", 
       FractionBox[
        RowBox[{
-        RowBox[{"newe", " ", "Pnew", " ", "Thetai"}], "-", 
+        RowBox[{"Pnew", " ", "Pold", " ", "Thetai"}], "-", 
         SqrtBox[
          RowBox[{
-          RowBox[{
-           RowBox[{"-", "4"}], " ", "newe", " ", 
-           SuperscriptBox["Pnew", "3"]}], "+", 
           RowBox[{"8", " ", 
            SuperscriptBox["Pnew", "4"]}], "-", 
+          RowBox[{"4", " ", 
+           SuperscriptBox["Pnew", "3"], " ", "Pold"}], "+", 
+          RowBox[{"2", " ", 
+           SuperscriptBox["Pnew", "3"], " ", "Pold", " ", 
+           SuperscriptBox["Thetai", "2"]}], "-", 
           RowBox[{
-           SuperscriptBox["newe", "2"], " ", 
            SuperscriptBox["Pnew", "2"], " ", 
-           SuperscriptBox["Thetai", "2"]}], "+", 
-          RowBox[{"2", " ", "newe", " ", 
-           SuperscriptBox["Pnew", "3"], " ", 
+           SuperscriptBox["Pold", "2"], " ", 
            SuperscriptBox["Thetai", "2"]}]}]]}], 
        RowBox[{"2", " ", 
         SuperscriptBox["Pnew", "2"]}]]}], ",", 
@@ -88,7 +88,7 @@ Cell[BoxData[
       FractionBox[
        RowBox[{
         RowBox[{
-         RowBox[{"-", "newe"}], " ", "Thetai"}], "-", 
+         RowBox[{"-", "Pold"}], " ", "Thetai"}], "-", 
         FractionBox[
          SqrtBox[
           RowBox[{
@@ -96,13 +96,14 @@ Cell[BoxData[
             SuperscriptBox["Pnew", "2"]}], " ", 
            RowBox[{"(", 
             RowBox[{
-             RowBox[{"4", " ", "newe", " ", "Pnew"}], "-", 
-             RowBox[{"8", " ", 
-              SuperscriptBox["Pnew", "2"]}], "+", 
              RowBox[{
-              SuperscriptBox["newe", "2"], " ", 
-              SuperscriptBox["Thetai", "2"]}], "-", 
-             RowBox[{"2", " ", "newe", " ", "Pnew", " ", 
+              RowBox[{"-", "8"}], " ", 
+              SuperscriptBox["Pnew", "2"]}], "+", 
+             RowBox[{"4", " ", "Pnew", " ", "Pold"}], "-", 
+             RowBox[{"2", " ", "Pnew", " ", "Pold", " ", 
+              SuperscriptBox["Thetai", "2"]}], "+", 
+             RowBox[{
+              SuperscriptBox["Pold", "2"], " ", 
               SuperscriptBox["Thetai", "2"]}]}], ")"}]}]], "Pnew"]}], 
        RowBox[{"2", " ", "Pnew"}]]}]}], "}"}], ",", 
    RowBox[{"{", 
@@ -110,20 +111,19 @@ Cell[BoxData[
      RowBox[{"y", "\[Rule]", 
       FractionBox[
        RowBox[{
-        RowBox[{"newe", " ", "Pnew", " ", "Thetai"}], "+", 
+        RowBox[{"Pnew", " ", "Pold", " ", "Thetai"}], "+", 
         SqrtBox[
          RowBox[{
-          RowBox[{
-           RowBox[{"-", "4"}], " ", "newe", " ", 
-           SuperscriptBox["Pnew", "3"]}], "+", 
           RowBox[{"8", " ", 
            SuperscriptBox["Pnew", "4"]}], "-", 
+          RowBox[{"4", " ", 
+           SuperscriptBox["Pnew", "3"], " ", "Pold"}], "+", 
+          RowBox[{"2", " ", 
+           SuperscriptBox["Pnew", "3"], " ", "Pold", " ", 
+           SuperscriptBox["Thetai", "2"]}], "-", 
           RowBox[{
-           SuperscriptBox["newe", "2"], " ", 
            SuperscriptBox["Pnew", "2"], " ", 
-           SuperscriptBox["Thetai", "2"]}], "+", 
-          RowBox[{"2", " ", "newe", " ", 
-           SuperscriptBox["Pnew", "3"], " ", 
+           SuperscriptBox["Pold", "2"], " ", 
            SuperscriptBox["Thetai", "2"]}]}]]}], 
        RowBox[{"2", " ", 
         SuperscriptBox["Pnew", "2"]}]]}], ",", 
@@ -131,7 +131,7 @@ Cell[BoxData[
       FractionBox[
        RowBox[{
         RowBox[{
-         RowBox[{"-", "newe"}], " ", "Thetai"}], "+", 
+         RowBox[{"-", "Pold"}], " ", "Thetai"}], "+", 
         FractionBox[
          SqrtBox[
           RowBox[{
@@ -139,19 +139,20 @@ Cell[BoxData[
             SuperscriptBox["Pnew", "2"]}], " ", 
            RowBox[{"(", 
             RowBox[{
-             RowBox[{"4", " ", "newe", " ", "Pnew"}], "-", 
-             RowBox[{"8", " ", 
-              SuperscriptBox["Pnew", "2"]}], "+", 
              RowBox[{
-              SuperscriptBox["newe", "2"], " ", 
-              SuperscriptBox["Thetai", "2"]}], "-", 
-             RowBox[{"2", " ", "newe", " ", "Pnew", " ", 
+              RowBox[{"-", "8"}], " ", 
+              SuperscriptBox["Pnew", "2"]}], "+", 
+             RowBox[{"4", " ", "Pnew", " ", "Pold"}], "-", 
+             RowBox[{"2", " ", "Pnew", " ", "Pold", " ", 
+              SuperscriptBox["Thetai", "2"]}], "+", 
+             RowBox[{
+              SuperscriptBox["Pold", "2"], " ", 
               SuperscriptBox["Thetai", "2"]}]}], ")"}]}]], "Pnew"]}], 
        RowBox[{"2", " ", "Pnew"}]]}]}], "}"}]}], "}"}]], "Output",
  CellChangeTimes->{3.7020353277560377`*^9, 3.702035413382494*^9, 
   3.702035452037003*^9, 3.702035494331965*^9, 3.7020390769371*^9, 
   3.70203994694123*^9, 3.7020405449068117`*^9, 3.702044869980707*^9, 
-  3.702045057303101*^9, 3.7020520072854023`*^9}]
+  3.702045057303101*^9, 3.7020520072854023`*^9, 3.702240749260597*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -367,6 +368,80 @@ Cell[BoxData[
  CellChangeTimes->{3.702201976961767*^9}]
 }, Open  ]],
 
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Checking", " ", "Bhremsstrahlung", " ", "Values"}], "*)"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"4.55", "*", "5.66"}], "\[Equal]", 
+       RowBox[{
+        RowBox[{"3.44", "*", "ThetaE"}], "-", 
+        RowBox[{"2.33", "*", "ThetaG"}]}]}], ",", 
+      RowBox[{
+       RowBox[{"4.55", 
+        RowBox[{"(", 
+         RowBox[{"1", "-", 
+          RowBox[{
+           RowBox[{"5.66", "^", "2"}], "/", "2"}]}], ")"}]}], "\[Equal]", 
+       RowBox[{
+        RowBox[{"3.44", 
+         RowBox[{"(", 
+          RowBox[{"1", "-", 
+           RowBox[{
+            RowBox[{"ThetaE", "^", "2"}], "/", "2"}]}], ")"}]}], " ", "+", 
+        " ", 
+        RowBox[{"2.33", 
+         RowBox[{"(", 
+          RowBox[{"1", "-", 
+           RowBox[{
+            RowBox[{"ThetaG", "^", "2"}], "/", "2"}]}], ")"}]}]}]}]}], "}"}], 
+    ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"ThetaE", ",", "ThetaG"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.70223958732097*^9, 3.7022396582304564`*^9}, {
+  3.702240614307329*^9, 3.7022406335618134`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Solve","ratnz",
+   "\"Solve was unable to solve the system with inexact coefficients. The \
+answer was obtained by solving a corresponding exact system and numericizing \
+the result.\"",2,2,1,22917750496573001271,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.702239660072191*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"ThetaE", "\[Rule]", "2.487335598389134`"}], ",", 
+     RowBox[{"ThetaG", "\[Rule]", 
+      RowBox[{"-", "7.380500232421193`"}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"ThetaE", "\[Rule]", "6.439180866082269`"}], ",", 
+     RowBox[{"ThetaG", "\[Rule]", 
+      RowBox[{"-", "1.546016232050211`"}]}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.7022396600757227`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"Checking", " ", "Pair", " ", "Production", " ", "Values"}], 
+   "*)"}]}]], "Input",
+ CellChangeTimes->{{3.702240642281439*^9, 3.702240655392662*^9}}],
+
+Cell[CellGroupData[{
+
 Cell[BoxData[
  RowBox[{"Solve", "[", 
   RowBox[{
@@ -374,33 +449,54 @@ Cell[BoxData[
     RowBox[{
      RowBox[{
       RowBox[{"4.55", "*", "5.66"}], "\[Equal]", 
-      RowBox[{
-       RowBox[{"3.44", "*", "ThetaE"}], "-", 
-       RowBox[{"2.33", "*", "ThetaG"}]}]}], ",", 
+      RowBox[{"3.44", 
+       RowBox[{"(", 
+        RowBox[{"ThetaP", "-", "ThetaE"}], ")"}]}]}], ",", 
      RowBox[{
       RowBox[{"4.55", 
        RowBox[{"(", 
         RowBox[{"1", "-", 
          RowBox[{
           RowBox[{"5.66", "^", "2"}], "/", "2"}]}], ")"}]}], "\[Equal]", 
-      RowBox[{
-       RowBox[{"3.44", 
-        RowBox[{"(", 
-         RowBox[{"1", "-", 
-          RowBox[{
-           RowBox[{"ThetaE", "^", "2"}], "/", "2"}]}], ")"}]}], " ", "+", " ", 
-       RowBox[{"2.33", 
-        RowBox[{"(", 
-         RowBox[{"1", "-", 
-          RowBox[{
-           RowBox[{"ThetaG", "^", "2"}], "/", "2"}]}], ")"}]}]}]}]}], "}"}], 
-   ",", " ", 
+      RowBox[{"3.44", 
+       RowBox[{"(", 
+        RowBox[{"2", "-", 
+         RowBox[{
+          RowBox[{"ThetaP", "^", "2"}], "/", "2"}], "-", 
+         RowBox[{
+          RowBox[{"ThetaE", "^", "2"}], "/", "2"}]}], ")"}]}]}]}], "}"}], ",", 
    RowBox[{"{", 
-    RowBox[{"ThetaE", ",", "ThetaG"}], "}"}]}], "]"}]], "Input",
- CellChangeTimes->{{3.70223958732097*^9, 3.702239647836417*^9}}]
+    RowBox[{"y", ",", "z"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.702241713831867*^9, 3.702241738404331*^9}, {
+  3.702242091761321*^9, 3.702242113872308*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Solve","ratnz",
+   "\"Solve was unable to solve the system with inexact coefficients. The \
+answer was obtained by solving a corresponding exact system and numericizing \
+the result.\"",2,4,2,22917750496573001271,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.702241740130159*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"y", "\[Rule]", "0.9409643506977153`"}], ",", 
+     RowBox[{"z", "\[Rule]", 
+      RowBox[{"-", "6.54537285860461`"}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"y", "\[Rule]", "6.54537285860461`"}], ",", 
+     RowBox[{"z", "\[Rule]", 
+      RowBox[{"-", "0.9409643506977153`"}]}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.702241740133471*^9}]
+}, Open  ]]
 },
 WindowSize->{808, 651},
-WindowMargins->{{4, Automatic}, {Automatic, 4}},
+WindowMargins->{{172, Automatic}, {Automatic, 0}},
 FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (July 28, \
 2016)",
 StyleDefinitions->"Default.nb"
@@ -418,14 +514,24 @@ CellTagsIndex->{}
 Notebook[{
 Cell[558, 20, 174, 3, 32, "Input"],
 Cell[CellGroupData[{
-Cell[757, 27, 1264, 32, 54, "Input"],
-Cell[2024, 61, 3347, 92, 255, "Output"]
+Cell[757, 27, 1386, 33, 54, "Input"],
+Cell[2146, 62, 3375, 92, 255, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5408, 158, 1130, 35, 117, "Input"],
-Cell[6541, 195, 6457, 171, 392, "Output"]
+Cell[5558, 159, 1130, 35, 117, "Input"],
+Cell[6691, 196, 6457, 171, 392, "Output"]
 }, Open  ]],
-Cell[13013, 369, 950, 30, 75, "Input"]
+Cell[CellGroupData[{
+Cell[13185, 372, 1192, 36, 117, "Input"],
+Cell[14380, 410, 337, 7, 42, "Message"],
+Cell[14720, 419, 475, 13, 32, "Output"]
+}, Open  ]],
+Cell[15210, 435, 225, 5, 54, "Input"],
+Cell[CellGroupData[{
+Cell[15460, 444, 855, 26, 54, "Input"],
+Cell[16318, 472, 337, 7, 42, "Message"],
+Cell[16658, 481, 453, 13, 32, "Output"]
+}, Open  ]]
 }
 ]
 *)
